@@ -1,4 +1,4 @@
-# znanium-save_books
+# znanium-savebooks
 Works on GNU/Linux OS.
 
 The script allows you to download books from znanium.com. The selenium module is used for this purpose.
