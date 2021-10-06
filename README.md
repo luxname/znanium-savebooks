@@ -17,7 +17,9 @@ $ python znanium.py https://znanium.com/read?id=xxxxxx 1 x
 The first argument is a link to the book in the reader itself.
 The second argument - from which page to load.
 The third argument - which page to load.
+
 ----------------------------------------------------------------------------
+
 Работает на GNU/Linux OS.
 
 Скрипт позволяет скачивать книги с сайта znanium.com. Для данных целей используется модуль selenium.
