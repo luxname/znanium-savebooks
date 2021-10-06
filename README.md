@@ -10,6 +10,8 @@ export PATH=$PATH:/path/to/geckodriver >> ~/.*your shell*profile
 3. In the directory with the script, create a text file auth.txt. In it, put your login and password through the space.
 4. Install selenium, img2pdf, PIL moduli via pip install or any other way.
 
+You also need firefox installed.
+
 Example of program execution from terminal:
 
 $ python znanium.py https://znanium.com/read?id=xxxxxx 1 x
@@ -30,6 +32,8 @@ How to:
 export PATH=$PATH:/path/to/geckodriver >> ~/.*your shell*profile
 3. В директории со скриптом создать текстовый файла auth.txt. В него через пробел указать логин и пароль.
 4. Через pip install или иным образом установить моудули selenium, img2pdf, PIL.
+
+Также вам нужен установленный firefox.
 
 Пример выполнения программы из терминала:
 
