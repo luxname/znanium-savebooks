@@ -100,7 +100,8 @@ def make_page (page):
     for img in imgs:
         final_img.paste(img, (0, y_offset))
         y_offset += img.size[1]
-    final_img.save(f'../book_pages/page_{page}.png')
+    final_img.save(f'../tmp_img/page_{page}.png')
+    os.rename(f'../tmp_img/page_{page}.png',f'../book_pages/page_{page}.png')
     for img in list_of_img:
         os.remove(img)
 
@@ -108,13 +109,18 @@ def make_page (page):
 def create_book():
     os.chdir('../book_pages')
     os.rmdir('../tmp_img')
-    pages_to_convert = sorted_alphanumeric(os.listdir(os.getcwd()))
-    print(pages_to_convert)
-    with open("book.pdf","wb") as file:
-	    file.write(img2pdf.convert(pages_to_convert))
-    os.rename("book.pdf", "../final_book.pdf")
-    os.chdir('..')
-    shutil.rmtree('book_pages')
+    files = [f for f in os.listdir(os.getcwd()) if f.endswith('.png')]
+    pages_to_convert = sorted_alphanumeric(files)
+    try:
+        with open("../book.pdf","wb") as file:
+	        file.write(img2pdf.convert(pages_to_convert))
+        os.rename("../book.pdf", "../final_book.pdf")
+        os.chdir('..')
+        shutil.rmtree('book_pages')
+        print ('Book is already')
+    except Exception as e:
+        print(e)
+        pass
 
 def main (link, start, end):
     if not os.path.exists('session'):
@@ -123,12 +129,12 @@ def main (link, start, end):
     make_dirs()
     zoom_out()
     for page in range(start, end):
-        if(not os.path.exists(f'../book_pages/page_{page}.png')):
+        if(not os.path.exists(f'../book_pages/page_{page}.png') or os.path.getsize(f'../book_pages/page_{page}.png')<100):
             make_page(page)
         print (f'Page {page} downloaded')
     browser.quit()
     create_book()
-    print ('Book is already')
+
 
 if __name__ == '__main__':
     main(link, start, end)
