@@ -1,4 +1,4 @@
-# znanium-savebooks
+# Znanium.com downloader (img pages in one PDF)
 
 Works on GNU/Linux OS/macOS.
 
