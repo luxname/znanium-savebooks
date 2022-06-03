@@ -1,4 +1,4 @@
-# znanium-savebooks
+# Znanium.com downloader (img pages in one PDF)
 
 Works on GNU/Linux OS/macOS.
 
@@ -8,7 +8,7 @@ For downloading you need:
 2. Dowsnload geckodriver in folder.
 3. In the directory with the script, create a text file auth.txt. In it, put your login and password through the space.
 4. Install selenium, img2pdf, PIL moduli via pip install or any other way.
-[img2pdf macOS install fix](https://medium.com/@jeremie.lumbroso/installing-pikepdf-with-homebrew-on-macos-big-sur-2a21995d0cfe)
+[install fix img2pdf for macOS](https://medium.com/@jeremie.lumbroso/installing-pikepdf-with-homebrew-on-macos-big-sur-2a21995d0cfe)
 
 Example of program execution from terminal:
 
@@ -29,7 +29,7 @@ The third argument - which page to load.
 3. В директории со скриптом создать текстовый файла auth.txt. В него через пробел указать логин и пароль.
 4. Через pip install или иным образом установить модули selenium, img2pdf, PIL.
 
-[img2pdf macOS исправление установки](https://medium.com/@jeremie.lumbroso/installing-pikepdf-with-homebrew-on-macos-big-sur-2a21995d0cfe)
+[исправление установки img2pdf на macOS](https://medium.com/@jeremie.lumbroso/installing-pikepdf-with-homebrew-on-macos-big-sur-2a21995d0cfe)
 
 Пример выполнения программы из терминала:
 
